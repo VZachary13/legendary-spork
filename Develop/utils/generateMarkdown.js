@@ -40,6 +40,20 @@ ${renderLicenseLink(license)}`
 function generateMarkdown(data) {
   return `# ${data.title}
 
+## Table of Contents
+
+  -[Description](#description)
+
+  -[Installation](#installation)
+
+  -[Screenshot](#screenshot)
+
+  -[Usage](#usage)
+
+  -[Contributions](#contributions)
+
+  -[Contacts](#contacts)
+
 ## Description
 
 ${data.description}
@@ -57,11 +71,19 @@ ${data.installation}
 
 ${data.usage}
 
+walkthrough Video - ${data.video}
+
 ${renderLicenseSection(data.license)}
 
 ## Contributions
 
 ${data.contributions}
+
+## Contacts
+
+E-mail - ${data.email}
+
+GitHub - ${data.github}
 `;
 }
 

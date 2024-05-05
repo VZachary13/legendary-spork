@@ -3,6 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
+const { type } = require('os');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -37,14 +38,29 @@ const questions = [
     },
     {
         type:'input',
+        name:'video',
+        message:'Please enter a link to a walthrough video. (or N/A)',
+    },
+    {
+        type:'input',
         name:'contributions',
-        message:'Who contributed and what did they contribute?(or N/A)',
+        message:'Who contributed and what did they contribute? (or N/A)',
     },
     {
         type:'list',
         name:'license',
         message:'Please select an applicable license',
-        choices: ['MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3', 'None']
+        choices: ['MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3', 'None'],
+    },
+    {
+        type:'input',
+        name:'email',
+        message:'Please enter an E-mail where you can be reached. (or N/A)',
+    },
+    {
+        type:'input',
+        name:'github',
+        message:'Please enter a link to your GitHub profile. (or N/A)',
     },
 ];
 
